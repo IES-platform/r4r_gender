@@ -1,13 +1,27 @@
-# Project on Gender
+# Introduction
 
-This repository deals with research questions as well as data related to gender. 
+Welcome to the IES Gender open source project.
 
-It also includes any *ad hoc* requests on this topic.
+The repository intends to hold assets that contribute towards scientific advancements on the subjects of **IP, Gender and Innovation**.
 
-## [Contributing](CONTRIBUTING.md)
+We invite you to contribute by proposing, correcting and improving any of the following:
 
-## [Code of Conduct](CODE_OF_CONDUCT.md)
+- Research questions.
+- Data.
+- Tools.
+- Methodologies.
+- Documentation.
 
-## [Change Log](CHANGELOG.md)
+# Contributing
 
-## [License](LICENSE.md)
+We kindly ask that contributors follow our [Contribution Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
+
+# Contents
+
+## 1. [World Gender-Name Dictionary (WGND)](wgnd/README.md)
+
+We compiled a worldwide gender-name dictionary which identifies gender for **6.2 million names in 182 countries**.  
+
+# [Change Log](CHANGELOG.md)
+
+# [License](LICENSE.md)
