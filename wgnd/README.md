@@ -48,5 +48,5 @@ Most of the sources used for this study come from national public institutions.
     - Bug report. *Help us fix whats broken*.
     - Feature request. *Suggest ideas and improvements for the project*.
 
-3. When you are done, create a pull request following the  pull request template. 
+3. When you are done, create a pull request following the pull request template. 
 
