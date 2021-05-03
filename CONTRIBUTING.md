@@ -1,8 +1,22 @@
-# Contributing
+# Contributing to this repository  
+
+## General:
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change. 
 
 Please note we have a [Code of Conduct](CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
+
+## Specifics: 
+
+1. Take a look at the [current issues](https://github.com/IES-platform/r4r_gender/issues) to see if you can contribute on any of them. 
+
+2. If your contribution is new, proceed to [create an issue](https://github.com/IES-platform/r4r_gender/issues/new). Try to follow our templates.
+
+    - Bug report. *Help us fix whats broken*.
+    - Feature request. *Suggest ideas and improvements for the project*.
+
+3. When you are done, create a pull request following the pull request template. 
+
 
 ## Pull Request Process
 
