@@ -15,9 +15,10 @@ This version is basically the version 1.0 adapted for Github sharing and tools t
 
 ## WGND 1.0
 
-Access the data here:
+Access the data on any of these links:
  - [s3://ies-rawdata-bucket/wgnd/wgnd_1.0/](s3://ies-rawdata-bucket/wgnd/wgnd_1.0/)
  - [https://www.wipo.int/edocs/pubdocs/en/wipo_pub_econstat_wp_33-tech1.zip](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_econstat_wp_33-tech1.zip)
+ - [Harvard Dataverse](https://doi.org/10.7910/DVN/YPRQH8)
 
 From the raw sources below we consolidated the first public World Gender-Name Dictionary (WGND 1.0), which compiled the information from 14 different sources covering 173 different countries. 
 Whenever available, we have used the country reported by the source; and, if not available, we have used the origin of the source. 
