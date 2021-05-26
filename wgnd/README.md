@@ -5,7 +5,7 @@ This repository describes how we consolidated our world gender-name dictionary (
 ## WGND 2.0
 
 Access the data on any of these links:
- - [ies-r4r-public](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/wgnd_2_0.zip) (coming soon!)
+ - [ies-r4r-public](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/wgnd_2_0.zip)
  - [Harvard Dataverse](coming soon)
 
 ## WGND 1.1
