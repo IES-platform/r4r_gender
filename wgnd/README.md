@@ -2,21 +2,27 @@
 
 This repository describes how we consolidated our world gender-name dictionary (WGND). 
 
+## WGND 2.0
+
+Access the data on any of these links:
+ - [ies-r4r-public](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/wgnd_2_0.zip) (coming soon!)
+ - [Harvard Dataverse](coming soon)
+
 ## WGND 1.1
 
-Access the data here:
+Access the data here in GitHub:
  - [wgnd_v1.1.csv](https://github.com/IES-platform/r4us/blob/81ce7946b5e1714d27f4637a3d50d723ccd8e88d/code/gender/wgnd/dictionary_source_v1.1.csv)
  - [wgndlang_v1.1.csv](https://github.com/IES-platform/r4us/blob/81ce7946b5e1714d27f4637a3d50d723ccd8e88d/code/gender/wgnd/code_langcode_code_v1.1.csv)
  
  or here:
- - [s3://ies-rawdata-bucket/wgnd/wgnd_1.1/](s3://ies-rawdata-bucket/wgnd/wgnd_1.1/)
+ - [ies-r4r-public](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/wgnd_1_1.zip)
  
 This version is basically the version 1.0 adapted for Github sharing and tools to be build upon.
 
 ## WGND 1.0
 
 Access the data on any of these links:
- - [s3://ies-rawdata-bucket/wgnd/wgnd_1.0/](s3://ies-rawdata-bucket/wgnd/wgnd_1.0/)
+ - [ies-r4r-public](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/wgnd_1_0.zip)
  - [https://www.wipo.int/edocs/pubdocs/en/wipo_pub_econstat_wp_33-tech1.zip](https://www.wipo.int/edocs/pubdocs/en/wipo_pub_econstat_wp_33-tech1.zip)
  - [Harvard Dataverse](https://doi.org/10.7910/DVN/YPRQH8)
 
