@@ -20,7 +20,7 @@ We kindly ask that contributors follow our [Contribution Guidelines](CONTRIBUTIN
 
 ## 1. [World Gender-Name Dictionary (WGND)](wgnd/README.md)
 
-We compiled a worldwide gender-name dictionary which identifies gender for **6.2 million names in 182 countries**.  
+We compiled a worldwide gender-name dictionary which identifies gender for **25+ million names in 195 countries or territories**.  
 
 # [Change Log](CHANGELOG.md)
 
