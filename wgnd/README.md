@@ -5,7 +5,7 @@ This repository describes how we consolidated our world gender-name dictionary (
 ## WGND 2.0
 
 Access the data on any of these links:
- - GitHub repository (coming soon in Git LFS)
+ - GitHub repository (coming soon in Git LFS or some similar solution to share big data in GitHub, for the moment we beg for your patience and use the links below)
  - [ies-r4r-public](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/wgnd_2_0.zip)
  - [Harvard Dataverse](https://dataverse.harvard.edu/dataverse/WGND)
 
