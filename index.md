@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+**Resources for Researchers (R4R) on ...**
+## Innovation, IP and Gender  (R4R Gender)
 
-You can use the [editor on GitHub](https://github.com/IES-platform/r4r_gender/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Welcome to the IES Gender open source project.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The repository intends to hold assets that contribute towards scientific advancements on the subjects of IP, Gender and Innovation.
 
-### Markdown
+We invite you to contribute by proposing, correcting and improving any of the following:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Research questions.
+- Data.
+- Tools.
+- Methodologies.
+- Documentation.
 
-```markdown
-Syntax highlighted code block
+# Contributing
 
-# Header 1
-## Header 2
-### Header 3
+We kindly ask that contributors follow our [Contribution Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
 
-- Bulleted
-- List
+# Contents
 
-1. Numbered
-2. List
+## 1. [World Gender-Name Dictionary (WGND)](wgnd/README.md)
 
-**Bold** and _Italic_ and `Code` text
+We compiled a worldwide gender-name dictionary which identifies gender for **25+ million names in 195 countries or territories**.  
 
-[Link](url) and ![Image](src)
-```
+# [Change Log](CHANGELOG.md)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/IES-platform/r4r_gender/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+# [License](LICENSE.md)
