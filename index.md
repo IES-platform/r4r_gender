@@ -27,6 +27,7 @@ We compiled a worldwide gender-name dictionary which identifies gender for **25+
 
 # [License](LICENSE.md)
 
+<div id="zoterotable"></div>
 <script>
                 fetch('https://api.zotero.org/groups/2551265/collections/6HBJVXIA/items?v=3&key=z8bcfbp0CfSjzBrnafyQjv3R&tag=Theme%3A+Gender&format=json')
                     .then(function (response) {
