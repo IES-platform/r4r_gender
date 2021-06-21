@@ -19,7 +19,7 @@ We kindly ask that contributors follow our [Contribution Guidelines](CONTRIBUTIN
 
 # Contents
 
-## 1. [World Gender-Name Dictionary (WGND)](wgnd/readme)
+## 1. [World Gender-Name Dictionary (WGND)](wgnd/wgnd)
 
 We compiled a worldwide gender-name dictionary which identifies gender for **25+ million names in 195 countries or territories**.  
 ## 2. [Economic research on Innovation, IP & Gender](lit/lit)
