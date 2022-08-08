@@ -1,0 +1,15 @@
+v 3
+d genderit. Attributes gender (only F & M) based on name 
+d and country/language patterns.
+d {bf:J. D. Raffo, WIPO, Innovation Economy Section}
+d After installation, see help {bf:genderit}.
+d
+d Distribution-Date: 20220807
+d
+d Support: email julio.raffo@wipo.int
+f genderit.ado
+f genderit.sthlp
+F genderit_wgnd-name-nocode.dta
+F genderit_wgnd-name-code-langexp.dta
+F genderit_wgnd-name-code.dta
+F genderit_wgnd-name-langcode.dta
