@@ -8,6 +8,7 @@ d Distribution-Date: 20220807
 d
 d Support: email julio.raffo@wipo.int
 f genderit.ado
+f genderit_install_wgnd.ado
 f genderit.sthlp
 F genderit_wgnd-name-nocode.dta
 F genderit_wgnd-name-code-langexp.dta
