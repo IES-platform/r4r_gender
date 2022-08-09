@@ -15,7 +15,7 @@ Run _genderit_install_wgnd.ado_ in Stata to install the latest WGND dictionary a
 
 (Patience, it may take several minutes, but it is only once)
 ````
-genderit_install_wgnd.ado
+genderit_install_wgnd
 
 ````
 
