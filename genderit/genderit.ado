@@ -69,7 +69,11 @@ di "'
  // working file -----------------------------
  keep genderid `name' `code' // keeps only needed vars
  
- qui gduplicates drop // drops unnecessary data
+ qui cap gduplicates drop // drops unnecessary data
+ if _rc!=0 {
+  di "Warning, install {it:gduplicates} from {search gtools: gtools} to make genderit faster"
+  qui duplicates drop // drops unnecessary data
+}
  
 // renames vars in working file
  ren `name' name  
