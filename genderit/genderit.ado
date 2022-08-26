@@ -186,11 +186,11 @@ if ("`namesplit'"!="") {
  qui mvencode gender*, mv(0) override
 
  ren gender* prob*
- qui gen gender = "n/a" if step==""
+ qui gen gender = "" if step==""
  qui replace gender="F" if probF>=`attribthreshold'
  qui replace gender="M" if probM>=`attribthreshold'
  qui replace gender="U" if gender==""
- qui lab var gender "Most likely gender (>=`attribthreshold'%)"
+ qui lab var gender "Most likely gender (>=`attribthreshold')"
  qui cap lab var probF "Likelihood of gender being F"
  qui cap lab var probM "Likelihood of gender being M"
  qui cap lab var probU "Likelihood of gender being U"
@@ -200,10 +200,10 @@ if ("`namesplit'"!="") {
  if ("`binarystats'"!= "") {
   qui gen probFbin=probF+probU/2
   qui gen probMbin=probM+probU/2 
-  qui gen genderbin = "n/a" if step==""
+  qui gen genderbin = "" if step==""
   qui replace genderbin="F" if probFbin>=`attribthreshold'
   qui replace genderbin="M" if probMbin>=`attribthreshold' 
-  qui lab var genderbin "Most likely gender (`attribthreshold'%, binary)"
+  qui lab var genderbin "Most likely gender (>=`attribthreshold', binary)"
   qui cap lab var probFbin "Likelihood of gender being F, binary"
   qui cap lab var probMbin "Likelihood of gender being M, binary" 
  }
@@ -220,9 +220,9 @@ end
 cap program drop genderit_steps
 program define genderit_steps
  args curname curcode dic step curfile
- ren `curname' name
+ qui ren `curname' name
  qui merge m:1 name `curcode' using `dic', keep(1 3) 
- ren name `curname' 
+ qui ren name `curname' 
  preserve
  qui keep if _merge==3
  qui keep genderid gender*
@@ -249,7 +249,7 @@ program define genderit_namesplit
   if (`x'==1) loc myregex = "`myregex'([^`delim']+)"
   else loc myregex = "`myregex'[`delim']([^`delim']+)"
 }
-ren `fullname' `fullname'0
+qui ren `fullname' `fullname'0
 end 
 **************************************************************************************
 * GENDERIT_NAMECLEAN
