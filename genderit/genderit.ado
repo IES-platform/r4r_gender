@@ -26,6 +26,7 @@ program genderit
 // loc clean "clean"
  loc cleanregex "[^a-z]"
  loc mycleandegree 3
+ loc precision 0.001
 * normalization of stats 
 // loc binarystats = "binarystats"
 // loc attribthreshold = .6
@@ -98,7 +99,7 @@ genderit_steps name2 code `wgndnamecode' fullname-ctry `appendfile'
 genderit_steps name3 code `wgndnamecode' fullname-ctry `appendfile'
 }
 qui count
-loc curshare = `r(N)'/`basenum'*100
+loc curshare = round(`r(N)'/`basenum'*100, `precision')
 di "Remaining unmatched after fullname-ctry step: `curshare'%"
 
 // describe using `appendfile'
@@ -111,7 +112,7 @@ genderit_steps name2 code `wgndnamecodelangexp' fullname-langexp `appendfile'
 genderit_steps name3 code `wgndnamecodelangexp' fullname-langexp `appendfile'
 }
 qui count
-loc curshare = `r(N)'/`basenum'*100
+loc curshare = round(`r(N)'/`basenum'*100, `precision')
 di "Remaining unmatched after fullname-ctry (language expansion) step: `curshare'%"
 
 ************** STEP 7-9 names 1-3 = wgnd_2_0_name-gender_nocode ******************************
@@ -122,7 +123,7 @@ genderit_steps name2 "" `wgndnamenocode' fullname-noctry `appendfile'
 genderit_steps name3 "" `wgndnamenocode' fullname-noctry `appendfile'
 }
 qui count
-loc curshare = `r(N)'/`basenum'*100
+loc curshare = round(`r(N)'/`basenum'*100, `precision')
 di "Remaining unmatched after fullname (no ctry) step: `curshare'%"
 
 // describe using `appendfile'
@@ -145,7 +146,7 @@ if ("`namesplit'"!="") {
 	genderit_steps name1`x'3 code `wgndnamecode' name`x'-ctry `appendfile'
  }	
     qui count
-	loc curshare = `r(N)'/`basenum'*100
+	loc curshare = round(`r(N)'/`basenum'*100, `precision')
 	di "Remaining unmatched after name`x'-ctry step: `curshare'%"
 
 	************** STEP 14-16 names 11-13 = wgnd-name-code-langexp.dta ******************************
@@ -156,7 +157,7 @@ if ("`namesplit'"!="") {
 	genderit_steps name1`x'3 code `wgndnamecodelangexp' name`x'-langexp `appendfile'
 }
 	qui count
-	loc curshare = `r(N)'/`basenum'*100
+	loc curshare = round(`r(N)'/`basenum'*100, `precision')
 	di "Remaining unmatched after name`x'-ctry (language expansion) step: `curshare'%"
 
 	************** STEP 17-19 names 11-13 = wgnd_2_0_name-gender_nocode ******************************
@@ -167,7 +168,7 @@ if ("`namesplit'"!="") {
 	genderit_steps name1`x'3 "" `wgndnamenocode' name`x'-noctry `appendfile'
 }
 	qui count
-	loc curshare = `r(N)'/`basenum'*100
+	loc curshare = round(`r(N)'/`basenum'*100, `precision')
 	di "Remaining unmatched after name`x' (no ctry) step: `curshare'%"
 	}
 
