@@ -4,6 +4,8 @@ This repository describes how we consolidated our world gender-name dictionary (
 
 ## WGND 2.0
 
+Read more about these files here: https://www.wipo.int/publications/en/details.jsp?id=4554&plang=EN
+
 Access the data on any of these links:
  - GitHub repository (coming soon in Git LFS or some similar solution to share big data in GitHub, for the moment we beg for your patience and use the links below)
  - [ies-r4r-public](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/wgnd_2_0.zip)
@@ -83,6 +85,9 @@ Access the data here:
 This version is basically the version 1.0 adapted for Github sharing and tools to be build upon.
 
 ## WGND 1.0
+
+Read more about these files here: https://www.wipo.int/publications/en/details.jsp?id=4125&plang=EN (see annex)
+
 
 Access the data on any of these links:
  - [ies-r4r-public](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/wgnd_1_0.zip)
