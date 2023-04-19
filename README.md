@@ -22,6 +22,10 @@ We kindly ask that contributors follow our [Contribution Guidelines](CONTRIBUTIN
 
 We compiled a worldwide gender-name dictionary which identifies gender for **25+ million names in 195 countries or territories**.  
 
+## 2. [Gender-it](genderit/readme.md)
+
+A tool to assist you in applying the worldwide gender-name dictionary to your data. 
+
 # [Change Log](CHANGELOG.md)
 
 # [License](LICENSE.md)
