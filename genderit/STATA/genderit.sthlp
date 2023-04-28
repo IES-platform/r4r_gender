@@ -1,8 +1,5 @@
 {smcl}
-{* *! version 0.1  Aug 2022}{...}
-{vieweralsosee "[D] merge" "mansection D merge"}{...}
-{vieweralsosee "[D] append" "help append"}{...}
-{vieweralsosee "[D] joinby" "help joinby"}{...}
+{* *! version 1.0  Apr 2023}{...}
 {viewerjumpto "Syntax" "genderit##syntax"}{...}
 {viewerjumpto "Description" "genderit##description"}{...}
 {viewerjumpto "Options" "genderit##options"}{...}
@@ -97,7 +94,7 @@ Genderit is faster when {search gtools:gtools} is installed.
 To install {it:genderit} from GitHub: 
 {p_end}
 
-{phang2}. {net "from https://raw.githubusercontent.com/IES-platform/r4r_gender/master/genderit/":net from "https://raw.githubusercontent.com/IES-platform/r4r_gender/master/genderit/"}
+{phang2}. {net "from https://raw.githubusercontent.com/IES-platform/r4r_gender/master/genderit/STATA/":net from "https://raw.githubusercontent.com/IES-platform/r4r_gender/master/genderit/STATA/"}
 
 {phang2}. {net install genderit:net install genderit}
 
