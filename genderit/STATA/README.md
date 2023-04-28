@@ -27,7 +27,7 @@ genderit_install_wgnd
 Sometimes a firewall may prevent STATA from correctly installing _genderit_ or the WGND dictionaries.
 Alternatively, you can:
 
-1. Download both _genderit_ and the WGND manually from: [genderit_wgnd_2_0.zip](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/dta/genderit_wgnd_2_0.zip)
+1. Download both _genderit_ and the WGND manually from: [genderit_wgnd_2_0.zip](https://ies-r4r-public.s3.eu-central-1.amazonaws.com/wgnd/dta/genderit_wgnd_2_0_dta.zip)
 
 2. In Stata run `sysdir` and get the path of the PLUS system directory.
 
