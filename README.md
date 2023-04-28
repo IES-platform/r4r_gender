@@ -26,6 +26,8 @@ We compiled a worldwide gender-name dictionary which identifies gender for **25+
 
 A tool to assist you in applying the worldwide gender-name dictionary to your data. 
 
-# [Change Log](CHANGELOG.md)
+# Other
 
-# [License](LICENSE.md)
+ - [Change Log](CHANGELOG.md)
+
+ - [License](LICENSE.md)
