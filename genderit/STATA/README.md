@@ -21,7 +21,7 @@ genderit_install_wgnd
 
 ## 3. Start using _genderit_ !!!
 
-- See an example here: [tutorial_genderit.do]example\tutorial_genderit.do)
+- See an example here: [tutorial_genderit.do](example/tutorial_genderit.do)
 
 ## 4. Troubleshooting
 
