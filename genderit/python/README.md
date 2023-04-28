@@ -8,6 +8,6 @@ The different functions can be found in the package: 'gender_it_functions.py'.
 
 The three dictionaries are stored compressed in dictionaries, the name-language-gender dictionary is divided in three files (d2_1, d2_2, d2_3).
 
-The Jupyter notebook 'introduction to gender-it.ipynb' display an example of the use of the geznder_it function.
+The Jupyter notebook 'introduction to gender-it.ipynb' display an example of the use of the gender_it function over the sample 'name_country.csv' available in the example folder.
 
 
