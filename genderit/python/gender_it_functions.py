@@ -12,29 +12,29 @@ def read_wgnd(path = False, All = True):
     if  path == False and All == True :
         s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750348').content
         d1 = pd.read_csv(StringIO(s.decode('utf-8')),sep = '\t')
-        print('saving first dictionnary.')
+        print('saving first dictionary.')
         d1.to_csv("d1.csv.gz", index=False, compression="gzip") 
         s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750350').content
         d2 = pd.read_csv(StringIO(s.decode('utf-8')),sep = ',')
         d2.to_csv( "d2.csv.gz", index=False, compression="gzip") 
-        print('saving second dictionnary.')
+        print('saving second dictionary.')
         s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750351').content
         d3 = pd.read_csv(StringIO(s.decode('utf-8')),sep = '\t')
         d3.to_csv("d3.csv.gz", index=False, compression="gzip")
-        print('saving third dictionnary.')
+        print('saving third dictionary.')
     elif path != False and All == True:
         s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750348').content
         d1 = pd.read_csv(StringIO(s.decode('utf-8')),sep = '\t')
-        print('saving first dictionnary.')
+        print('saving first dictionary.')
         d1.to_csv(path + "d1.csv.gz", index=False, compression="gzip") 
         s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750350').content
         d2 = pd.read_csv(StringIO(s.decode('utf-8')),sep = ',')
         d2.to_csv(path + "d2.csv.gz", index=False, compression="gzip") 
-        print('saving second dictionnary.')
+        print('saving second dictionary.')
         s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750351').content
         d3 = pd.read_csv(StringIO(s.decode('utf-8')),sep = '\t')
         d3.to_csv(path + "d3.csv.gz", index=False, compression="gzip")
-        print('saving third dictionnary.')
+        print('saving third dictionary.')
     elif All != True:
         s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750351').content
         d3 = pd.read_csv(StringIO(s.decode('utf-8')),sep = '\t')
@@ -84,36 +84,36 @@ def clean_country_function(country_code):
     return country_code
 
 
-def reading_wgnd (dictionnary, path):
-    if dictionnary == 1:
+def reading_wgnd (dictionary, path):
+    if dictionary == 1:
         try: 
-            print("reading the dictionnary.")
+            print("reading the dictionary.")
             data = pd.read_csv(path + 'd1.csv.gz', compression="gzip" ) ### find a way to change to local path        
         except:
-            print("downloading the dictionnary.")
+            print("downloading the dictionary.")
             s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750348').content
             data = pd.read_csv(StringIO(s.decode('utf-8')),sep = '\t')
-    if dictionnary == 2:
+    if dictionary == 2:
         try:    
-            print("reading the dictionnary.")
+            print("reading the dictionary.")
             data = pd.concat(map(pd.read_csv, [path + 'd2_1.csv.gz',path + 'd2_2.csv.gz',path + 'd2_3.csv.gz']))
         except:
-            print("downloading the dictionnary.")
+            print("downloading the dictionary.")
             s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750350').content
             data = pd.read_csv(StringIO(s.decode('utf-8')),sep = ',')
-    if dictionnary == 3:
+    if dictionary == 3:
         try: 
-            print("reading the dictionnary.")
+            print("reading the dictionary.")
             data = pd.read_csv(path + 'd3.csv.gz', compression="gzip" ) 
         except:
-            print("downloading the dictionnary.")
+            print("downloading the dictionary.")
             s = requests.get('https://dataverse.harvard.edu/api/access/datafile/4750351').content
             data = pd.read_csv(StringIO(s.decode('utf-8')),sep = '\t')
     return data
 
 
 
-def get_gender(df, name_column, country_column = False,  split = True, split_sep = ' ', treshold = 0.6, path = 'dictionaries/'): 
+def get_gender(df, name_column, country_column = False,  split = True, split_sep = ' ', treshold = 0.6, path = 'dictionaries/', order = 'first'): 
     df = df.reset_index(drop=True) ### in case of multiple index
     df = df.reset_index(names = 'name_id') ### we need the name_id to reconnect to final results
     original = df.copy()
@@ -155,7 +155,11 @@ def get_gender(df, name_column, country_column = False,  split = True, split_sep
         found = found[(found[cols] > treshold).any(axis = 1)]
         del data
         try:
-            found  = found.sort_values('surname_position', ascending = True).drop_duplicates(subset = 'name_id')
+            if order == 'first':
+                found  = found.sort_values('surname_position', ascending = True).drop_duplicates(subset = 'name_id')
+                del found['surname_position']
+            else:
+                found  = found.sort_values('surname_position', ascending = False).drop_duplicates(subset = 'name_id')
             del found['surname_position']
         except:
             found = found.drop_duplicates(subset = 'name_id')
@@ -172,8 +176,14 @@ def get_gender(df, name_column, country_column = False,  split = True, split_sep
         data = data [data['clean_country_column'].isin(list(dff['clean_country_column']))]
         data = data.drop_duplicates(subset = ('clean_name','clean_country_column'))
         res = data.merge(dff, on = ('clean_name','clean_country_column'))
-        res = res.sort_values('surname_position', ascending = True).drop_duplicates(subset = 'name_id')
-        del res['surname_position']
+        try:
+            if order == 'first':
+                res = res.sort_values('surname_position', ascending = True).drop_duplicates(subset = 'name_id')
+            else:
+                res = res.sort_values('surname_position', ascending = False).drop_duplicates(subset = 'name_id')
+            del res['surname_position']
+        except:
+            res = res.drop_duplicates(subset = 'name_id')
         res['wgt'] = 1
         res = res.pivot(index=['clean_name','clean_country_column','name_id'], columns="gender", values="wgt").reset_index()
         res['level'] = 2
@@ -256,7 +266,7 @@ def get_gender(df, name_column, country_column = False,  split = True, split_sep
         del res_final['surname_position']
     except:
         pass
-    print ('Results distirbution is as follow:','\n',h)
+    print ('Results distribution is as follow:','\n',h)
     cols_2 = list(original.columns) +  ['level', 'gender'] + cols
     res_final = res_final [cols_2] 
     return res_final
