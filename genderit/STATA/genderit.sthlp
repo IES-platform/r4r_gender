@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 1.0  Apr 2023}{...}
+{* *! version 2.0  Aug 2024}{...}
 {viewerjumpto "Syntax" "genderit##syntax"}{...}
 {viewerjumpto "Description" "genderit##description"}{...}
 {viewerjumpto "Options" "genderit##options"}{...}
@@ -84,6 +84,16 @@ It requires to install the WGND before utilisation. See next section for details
 Genderit is faster when {search gtools:gtools} is installed.
 {p_end}
 
+{synoptline}
+
+{marker examples}{...}
+{title:Examples:}
+
+{phang2}{cmd:. genderit} {it:mynames mycode}
+
+{phang2}{cmd:. genderit} {it:mynames mycode , clean}
+
+{phang2}{cmd:. genderit} {it:mynames mycode , clean binary}
 
 {synoptline}
 
@@ -104,18 +114,26 @@ To install the WGND run the command {it:genderit_install_wgnd}, after installing
 {p_end}
 
 
-{phang2}. {stata genderit_install_wgnd:genderit_install_wgnd} 
+{phang2}. {stata genderit_install_wgnd:genderit_install_wgnd} {it: [, REPlace Source(wipo2)]}
 
+{synoptset 25 tabbed}{...}
+{synoptline}
+{synopthdr: install wgnd options}
 {synoptline}
 
-{marker examples}{...}
-{title:Examples:}
+{synopt :{opt rep:lace}}
+Replaces any WGND dictionary existing. 
+If ommitted, by default, {it:genderit_install_wgnd} skips preexisting WGND files already installed.
+{p_end}
 
-{phang2}{cmd:. genderit} {it:mynames mycode}
+{synopt :{opt s:ource(sourcename)}}
+Deafault is {it:s(wipo2)}. Available sources are: {break}
+- wipo2 (WGND 2.0 hosted at WIPO) {break}
+- harvard2 (WGND 2.0 hosted at Harvard Dataverse) {break}
+- harvard1 (WGND 1.0 hosted at Harvard Dataverse) {break}
+- wipo1 (WGND 1.0 hosted at WIPO). {break}
 
-{phang2}{cmd:. genderit} {it:mynames mycode , clean}
-
-{phang2}{cmd:. genderit} {it:mynames mycode , clean binary}
+{p_end}
 
 {synoptline}
 

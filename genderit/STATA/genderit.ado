@@ -1,4 +1,4 @@
-*! 1.0 J.D. Raffo 2023-04-28
+*! 1.1 J.D. Raffo 2024-08-15
 * Gender It (v.1.0)
 * =================
 * To Do
@@ -35,7 +35,7 @@ di "'
 *********************************************************
  confirm file "`wgndnamecodelangexp'"
  confirm file "`wgndnamecode'"
- confirm file "`wgndnamelangcode'"
+//  confirm file "`wgndnamelangcode'" // not being used so far
  confirm file "`wgndnamenocode'"
 
 *********************************************************
