@@ -10,3 +10,4 @@ d Support: email julio.raffo@wipo.int
 f genderit.ado
 f genderit_install_wgnd.ado
 f genderit.sthlp
+f create genderit data.do
