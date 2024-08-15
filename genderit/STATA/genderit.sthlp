@@ -127,7 +127,7 @@ If ommitted, by default, {it:genderit_install_wgnd} skips preexisting WGND files
 {p_end}
 
 {synopt :{opt s:ource(sourcename)}}
-Deafault is {it:s(wipo2)}. Available sources are: {break}
+Default is {it:s(wipo2)}. Available sources are: {break}
 - wipo2 (WGND 2.0 hosted at WIPO) {break}
 - harvard2 (WGND 2.0 hosted at Harvard Dataverse) {break}
 - harvard1 (WGND 1.0 hosted at Harvard Dataverse) {break}
