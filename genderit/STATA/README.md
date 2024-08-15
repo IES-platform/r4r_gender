@@ -15,15 +15,46 @@ Run _genderit_install_wgnd.ado_ in Stata to install the latest WGND dictionary a
 
 (Patience, it may take several minutes, but it is only once)
 ````
-genderit_install_wgnd
-
+genderit_install_wgnd // WGND 2.0 (default)
 ````
+
+
+
 
 ## 3. Start using _genderit_ !!!
 
-- See an example here: [tutorial_genderit.do](example/tutorial_genderit.do)
+- See a detailed example  here: [tutorial_genderit.do](example/tutorial_genderit.do)
+- See basic example here: [create genderit data.do](create%20genderit%20data.do)
 
-## 4. Troubleshooting
+
+## 4. Troubleshooting 
+
+Sometimes a firewall may prevent STATA from correctly installing _genderit_ or the WGND dictionaries.
+Alternatively, you can download WGND from alternative sources:
+
+### WGND 2.0
+1. Hosted at WIPO
+````
+genderit_install_wgnd , s(wipo2) // WGND 2.0 (default)
+````
+
+2. hosted at Harvard Dataverse
+````
+genderit_install_wgnd , s(harvard2) // WGND 2.0
+````
+
+### WGND 1.0
+1. Hosted at WIPO
+````
+genderit_install_wgnd , s(wipo1) // WGND 1.0 (legacy)
+````
+
+2. hosted at Harvard Dataverse
+````
+genderit_install_wgnd , s(harvard1) // WGND 1.0 (legacy)
+````
+
+### More troubleshooting [discontinued]
 
 Sometimes a firewall may prevent STATA from correctly installing _genderit_ or the WGND dictionaries.
 Alternatively, you can:
