@@ -24,8 +24,7 @@ genderit_install_wgnd // WGND 2.0 (default)
 ## 3. Start using _genderit_ !!!
 
 - See a detailed example  here: [tutorial_genderit.do](example/tutorial_genderit.do)
-- See basic example here: [create genderit data.do](create%20genderit%20data.do)
-
+- See basic example here: [basic_genderit_example.do](basic_genderit_example.do)
 
 ## 4. Troubleshooting 
 
