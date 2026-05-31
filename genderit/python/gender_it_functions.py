@@ -259,6 +259,7 @@ def get_gender(df, name_column, country_column = False,  split = True, split_sep
     res_final['gender'] = res_final['gender'].fillna('not found')
     h = res_final['gender'].value_counts()
     h = pd.DataFrame(h)
+    h.columns = ['gender']
     h ['Percentage'] = ((h['gender'] / len(original))*100 )
     try:
         del res_final['clean_name']
